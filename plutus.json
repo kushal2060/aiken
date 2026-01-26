@@ -1,0 +1,146 @@
+{
+  "preamble": {
+    "title": "aiken-lang/hello-world",
+    "description": "Aiken contracts for project 'aiken-lang/hello-world'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.21+42babe5"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "hello_world.hello_world.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/hello_world~1Redeemer"
+        }
+      },
+      "compiledCode": "59010501010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400060166ea800e2b30013371e6eb8c038c030dd5003a450c48656c6c6f20776f726c642100899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5180718061baa0038a5040291640291640346eb8c034004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "bb7784a50f57d004df69b768e01a042a1d2ae93825c1189bae287ca6"
+    },
+    {
+      "title": "hello_world.hello_world.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59010501010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea801626464b3001300f0028acc004cdc3a400060166ea800e2b30013371e6eb8c038c030dd5003a450c48656c6c6f20776f726c642100899199119801001000912cc00400629422b30013371e6eb8c04400400e2946266004004602400280690101bac300f30103010301030103010301030103010300d3754601e0146eb8c038c030dd5180718061baa0038a5040291640291640346eb8c034004c028dd5002c5900818050009805180580098039baa0018b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "bb7784a50f57d004df69b768e01a042a1d2ae93825c1189bae287ca6"
+    },
+    {
+      "title": "multisign.multisign.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/multisign~1MultisigDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/multisign~1MultisigRedeemer"
+        }
+      },
+      "compiledCode": "59013301010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea80162b3001300a375400b15980099b8748000c024dd5000c4c8c8cdc49bad300f3010002323300100132330010013758602260246024602460246024602460246024601c6ea8c04402c896600200314bd7044cc8966002646600200200e44b30010018a508acc004cdc79bae30160010048a51899801001180b800a0224051133013375200466008008003133004004001403c6eb8c048004c04c005010112cc0040062900044cdc0240046600400460240028078dd6180700098051baa300d300a375400316402116402d164020601600260166018002600e6ea80062c8028c020004c020c024004c020004c00cdd5004452689b2b200201",
+      "hash": "3c7350a7a36294a2b7be12b629e4f1135d6f4a51afbc1e81686c9535"
+    },
+    {
+      "title": "multisign.multisign.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59013301010029800aba2aba1aba0aab9faab9eaab9dab9a488888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea80162b3001300a375400b15980099b8748000c024dd5000c4c8c8cdc49bad300f3010002323300100132330010013758602260246024602460246024602460246024601c6ea8c04402c896600200314bd7044cc8966002646600200200e44b30010018a508acc004cdc79bae30160010048a51899801001180b800a0224051133013375200466008008003133004004001403c6eb8c048004c04c005010112cc0040062900044cdc0240046600400460240028078dd6180700098051baa300d300a375400316402116402d164020601600260166018002600e6ea80062c8028c020004c020c024004c020004c00cdd5004452689b2b200201",
+      "hash": "3c7350a7a36294a2b7be12b629e4f1135d6f4a51afbc1e81686c9535"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "List<aiken/crypto/VerificationKeyHash>": {
+      "dataType": "list",
+      "items": {
+        "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+      }
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "hello_world/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "hello_world/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "multisign/MultisigDatum": {
+      "title": "MultisigDatum",
+      "anyOf": [
+        {
+          "title": "MultisigDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owners",
+              "$ref": "#/definitions/List<aiken~1crypto~1VerificationKeyHash>"
+            },
+            {
+              "title": "threshold",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "multisign/MultisigRedeemer": {
+      "title": "MultisigRedeemer",
+      "anyOf": [
+        {
+          "title": "Spend",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    }
+  }
+}
