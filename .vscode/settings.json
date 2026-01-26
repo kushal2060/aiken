@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.ak": "aiken"
+  },
+  "editor.formatOnSave": false
+}
+  
