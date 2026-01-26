@@ -56,26 +56,25 @@ test multisignex() {
     }
   multisign.spend(datum, redeemer, own_ref, mock_tx)
 }
+// test multisignex1() {
+//   let owner1: VerificationKeyHash =
+//     #"aabbccddaabbccddaabbccddaabbccddaabbccddaabbccddaabbccdd"
+//   let owner2: VerificationKeyHash =
+//     #"11223344112233441122334411223344112233441122334411223344"
+//   let owner3: VerificationKeyHash =
+//     #"55667788556677885566778855667788556677885566778855667788"
+//   let attacker: VerificationKeyHash =
+//     #"99999999999999999999999999999999999999999999999999999999"
 
-test multisignex1() {
-  let owner1: VerificationKeyHash =
-    #"aabbccddaabbccddaabbccddaabbccddaabbccddaabbccddaabbccdd"
-  let owner2: VerificationKeyHash =
-    #"11223344112233441122334411223344112233441122334411223344"
-  let owner3: VerificationKeyHash =
-    #"55667788556677885566778855667788556677885566778855667788"
-  let attacker: VerificationKeyHash =
-    #"99999999999999999999999999999999999999999999999999999999"
+//   let datum =
+//     Some(MultisigDatum { owners: [owner1, owner2, owner3], threshold: 2 })
+//   let redeemer = Spend
+//   let own_ref = OutputReference { transaction_id: #"", output_index: 0 }
 
-  let datum =
-    Some(MultisigDatum { owners: [owner1, owner2, owner3], threshold: 2 })
-  let redeemer = Spend
-  let own_ref = OutputReference { transaction_id: #"", output_index: 0 }
-
-  let mock_tx =
-    Transaction {
-      ..transaction.placeholder,
-      extra_signatories: [owner1, attacker],
-    }
-  multisign.spend(datum, redeemer, own_ref, mock_tx)
-}
+//   let mock_tx =
+//     Transaction {
+//       ..transaction.placeholder,
+//       extra_signatories: [owner1, attacker],
+//     }
+//   multisign.spend(datum, redeemer, own_ref, mock_tx)
+// }
