@@ -47,6 +47,12 @@ export function getTxBuilder(){
     });
 }
 
+function print(){
+    let address =getScript().scriptAddr;
+    console.log('Script DDRESS',address);
+}
+print();
+
 //get Utxos
 export async function getUtxoByHash(txHash: string): Promise<UTxO> {
     const utxos = await blockchainProvider.fetchUTxOs(txHash);

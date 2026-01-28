@@ -5,10 +5,10 @@ import {
   MeshTxBuilder,
   serializePlutusScript,
 } from "@meshsdk/core";
-import {applyParamsToScript} from "@meshsdk/core-csl";
+import {applyParamsToScript} from "@meshsdk/core"
 import fs, {read} from 'fs';
-
-export const blockchainProvider = new BlockfrostProvider(process.env.BLOCKFROST_PROJECT_ID);
+import blueprint from "../plutus.json"
+export const blockchainProvider = new BlockfrostProvider(process.env.BLOCKFROST_PROJECT_ID as string);
 
 export const owner_wallet = new MeshWallet({
     networkId: 0,
@@ -35,11 +35,11 @@ export function getTxBuilder() {
     return new MeshTxBuilder({
         fetcher: blockchainProvider,
         submitter: blockchainProvider,
-        verbose: true, //logs
+        // verbose: true, //logs
     });
 }
 
-const blueprint = JSON.parse(fs.readFileSync("../../plutus.json"));
+
 export const scriptCbor = applyParamsToScript(blueprint.validators[4].compiledCode, []);
 export const scriptAddr = serializePlutusScript(
     {code: scriptCbor, version: "V3"},
