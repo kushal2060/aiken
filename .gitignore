@@ -6,3 +6,8 @@ build/
 docs/
 node_modules
 /.env
+/me.sk
+/me1.sk
+/me2.sk
+/owner.sk
+/beneficiary.sk
