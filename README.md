@@ -1,3 +1,12 @@
+# frontend 
+```bash
+cd frontend/multisign
+npm insytall
+npm run dev
+```
+
+# There in the web app provide the owners address while locking and receipent address while unlocking
+### Make sure the plutus.json path is coorect and working
 # hello-world
 
 Write validators in the `validators` folder, and supporting functions in the `lib` folder using `.ak` as a file extension.
