@@ -78,15 +78,15 @@ export default function Home() {
         {/* Hero section */}
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-4 bg-linear-to-r from-purple-200 via-white to-indigo-200 bg-clip-text text-transparent">
-              Trustless Multi-Signature Vault
+            <h2 className="text-3xl font-bold mb-4 bg-linear-to-r from-purple-200 via-white to-indigo-200 bg-clip-text text-transparent">
+            A Multi-Signature Vault
             </h2>
             <p className="text-lg text-purple-200/60 max-w-2xl mx-auto">
               Lock funds with multiple owners and require threshold signatures to unlock. 
-              Powered by Cardano smart contracts.
+              Powered by Cardano Aiken smart contracts.
             </p>
           </div>
-
+    
           {!connected ? (
             <div className="max-w-2xl mx-auto">
               <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-12 text-center">

@@ -164,7 +164,7 @@ export default function LockFunds({ wallet }: LockFundsProps) {
       <div>
         <h3 className="text-2xl font-bold text-white mb-2">Lock Funds</h3>
         <p className="text-purple-200/60">
-          Configure your multi-signature vault with owner addresses and threshold
+          Configure with owner addresses and threshold
         </p>
       </div>
 
@@ -180,7 +180,7 @@ export default function LockFunds({ wallet }: LockFundsProps) {
           </p>
         </div>
         <p className="text-xs text-purple-300/50 mt-1">
-          Your connected wallet is automatically included as the first owner
+          Your connected wallet is the first owner
         </p>
       </div>
 
