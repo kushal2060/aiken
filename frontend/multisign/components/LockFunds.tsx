@@ -207,21 +207,25 @@ export default function LockFunds({ wallet }: LockFundsProps) {
 
  
       <div>
-        <label className="block text-sm font-medium text-purple-200 mb-2">
-          Signature Threshold
-        </label>
-        <input
-          type="number"
-          value={threshold}
-          onChange={(e) => setThreshold(parseInt(e.target.value) || 1)}
-          min="1"
-          max={totalOwners}
-          className="w-full backdrop-blur-lg bg-white/5 border border-white/20 focus:border-purple-500 rounded-xl px-4 py-3 text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all"
-        />
-        <p className="text-xs text-purple-300/50 mt-1">
-          Number of signatures required to unlock (out of {totalOwners} total owners)
-        </p>
-      </div>
+    <label className="block text-sm font-medium text-purple-200 mb-2">
+      Signature Threshold
+    </label>
+    <input
+      type="number"
+      value={threshold || ''}
+      onChange={(e) => {
+        const val = parseInt(e.target.value);
+        setThreshold(isNaN(val) ? 0 : val);
+      }}
+      min="1"
+      max="5"
+      className="w-full backdrop-blur-lg bg-white/5 border border-white/20 focus:border-purple-500 rounded-xl px-4 py-3 text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all"
+      placeholder="Enter threshold (1-5)"
+    />
+    <p className="text-xs text-purple-300/50 mt-1">
+      Number of signatures required to unlock (minimum 1, maximum 5)
+    </p>  
+    </div>
 
 
       <div>
