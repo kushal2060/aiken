@@ -289,9 +289,6 @@ export default function LockFunds({ wallet }: LockFundsProps) {
               <p className="text-green-300/70 text-xs font-mono break-all">
                 Transaction: {txHash}
               </p>
-              <p className="text-green-300/70 text-xs mt-2">
-                Save this for unlocking: <span className="font-semibold">{txHash}#0</span>
-              </p>
             </div>
           </div>
         </div>
