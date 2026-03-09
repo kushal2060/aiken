@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { BrowserWallet } from '@meshsdk/core';
-import LockFunds from '@/components/LockFunds';
-import UnlockFunds from '@/components/UnlockFunds';
+import LockFunds from '@/components/LockFunddatum';
+import UnlockFunds from '@/components/UnlockDatum';
 import WalletConnect from '@/components/WalletConnect';
 
 export default function Home() {
@@ -96,7 +96,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-3">Connect Your Wallet</h3>
-                <p className="text-purple-200/60 mb-8">
+ 
+                <p className="text-purple-200/60 mb-8 mt-5">
                   Connect your Cardano wallet to start locking and unlocking funds with multi-signature security
                 </p>
                 <div className="text-sm text-purple-300/50">
