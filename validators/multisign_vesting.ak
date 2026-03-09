@@ -40,10 +40,10 @@ validator multisign_vesting {
   }
 }
 
-type TestCase1 {
-  is_owner1_signed: Bool,
-  is_owner2_signed: Bool,
-}
+// type TestCase1 {
+//   is_owner1_signed: Bool,
+//   is_owner2_signed: Bool,
+// }
 
 type TestCase2 {
   is_owner1_signed: Bool,
@@ -51,13 +51,13 @@ type TestCase2 {
   is_lock_time_passedzz: Bool,
 }
 
-fn get_test_tx1(test_case: TestCase1) {
-  let TestCase1 { is_owner1_signed, is_owner2_signed } = test_case
-  mocktail_tx()
-    |> required_signer_hash(is_owner1_signed, mock_pub_key_hash(1))
-    |> required_signer_hash(is_owner2_signed, mock_pub_key_hash(2))
-    |> complete()
-}
+// fn get_test_tx1(test_case: TestCase1) {
+//   let TestCase1 { is_owner1_signed, is_owner2_signed } = test_case
+//   mocktail_tx()
+//     |> required_signer_hash(is_owner1_signed, mock_pub_key_hash(1))
+//     |> required_signer_hash(is_owner2_signed, mock_pub_key_hash(2))
+//     |> complete()
+// }
 
 fn get_test_tx2(test_case: TestCase2) {
   let TestCase2 {
